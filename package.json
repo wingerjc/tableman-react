@@ -83,6 +83,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "history": "^4.7.2",
     "immutable": "^3.8.2",
+    "moo": "^0.4.3",
     "nearley": "^2.11.1",
     "pegjs": "^0.10.0",
     "prop-types": "^15.6.0",
