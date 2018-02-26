@@ -17,6 +17,12 @@ switch (option) {
   case 'build':
     shell.exec(`cross-env rimraf docroot && webpack --progress --display-error-details`);
     break;
+  case 'genparse':
+    shell.ls(`src/js/common/parsers/grammars/*.ne`).forEach(function(fileName) {
+      let newFile = fileName.replace(/\/grammars/, "").replace(/\.ne/i,"-nearley.js");
+      shell.exec(`nearleyc ${fileName} -o ${newFile}`);
+    });
+    break
   default:
     // If the app type is invalid, stop execution of the file.
     console.log(colors.green('Invalid option.'));

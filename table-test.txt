@@ -1,0 +1,5 @@
+{
+header-author: jaymes winger
+header-license: MIT
+header-source: barrettsprivateers.net
+}
